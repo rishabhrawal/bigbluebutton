@@ -128,9 +128,9 @@ class PanelManager extends PureComponent {
 
     const resizableEnableOptions = {
       top: false,
-      right: !isRTL,
+      right: !!isRTL,
       bottom: false,
-      left: !!isRTL,
+      left: !isRTL,
       topRight: false,
       bottomRight: false,
       bottomLeft: false,
@@ -177,9 +177,9 @@ class PanelManager extends PureComponent {
 
     const resizableEnableOptions = {
       top: false,
-      right: !isRTL,
+      right: !!isRTL,
       bottom: false,
-      left: !!isRTL,
+      left: !isRTL,
       topRight: false,
       bottomRight: false,
       bottomLeft: false,
@@ -408,15 +408,6 @@ class PanelManager extends PureComponent {
     const { enableResize, openPanel } = this.props;
     if (openPanel === '') return null;
     const panels = [];
-    if (enableResize) {
-      panels.push(
-        this.renderUserListResizable(),
-        <div className={styles.userlistPad} key={this.padKey} />,
-      );
-    } else {
-      panels.push(this.renderUserList());
-    }
-
     if (openPanel === 'chat') {
       if (enableResize) {
         panels.push(this.renderChatResizable());
@@ -463,6 +454,14 @@ class PanelManager extends PureComponent {
       } else {
         panels.push(this.renderWaitingUsersPanel());
       }
+    }
+    if (enableResize) {
+      panels.push(
+        this.renderUserListResizable(),
+        <div className={styles.userlistPad} key={this.padKey} />,
+      );
+    } else {
+      panels.push(this.renderUserList());
     }
 
     return panels;

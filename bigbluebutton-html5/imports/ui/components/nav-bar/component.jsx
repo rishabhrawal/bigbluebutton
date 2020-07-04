@@ -92,7 +92,18 @@ class NavBar extends PureComponent {
       <div className={styles.navbar}>
         <div className={styles.top}>
           <div className={styles.left}>
-            {!isExpanded ? null
+            <SettingsDropdownContainer amIModerator={amIModerator} />
+          </div>
+          <div className={styles.center}>
+            <h1 className={styles.presentationTitle}>{presentationTitle}</h1>
+
+            <RecordingIndicator
+              mountModal={mountModal}
+              amIModerator={amIModerator}
+            />
+          </div>
+          <div className={styles.right}>
+            {isExpanded ? null
               : <Icon iconName="left_arrow" className={styles.arrowLeft} />
             }
             <Button
@@ -108,20 +119,10 @@ class NavBar extends PureComponent {
               aria-expanded={isExpanded}
               accessKey={TOGGLE_USERLIST_AK}
             />
-            {isExpanded ? null
+            {!isExpanded ? null
               : <Icon iconName="right_arrow" className={styles.arrowRight} />
             }
-          </div>
-          <div className={styles.center}>
-            <h1 className={styles.presentationTitle}>{presentationTitle}</h1>
 
-            <RecordingIndicator
-              mountModal={mountModal}
-              amIModerator={amIModerator}
-            />
-          </div>
-          <div className={styles.right}>
-            <SettingsDropdownContainer amIModerator={amIModerator} />
           </div>
         </div>
         <div className={styles.bottom}>

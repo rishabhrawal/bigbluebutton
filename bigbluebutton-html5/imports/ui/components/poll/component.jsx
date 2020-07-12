@@ -335,18 +335,6 @@ class Poll extends Component {
       <div>
         <header className={styles.header}>
           <Button
-            ref={(node) => { this.hideBtn = node; }}
-            tabIndex={0}
-            label={intl.formatMessage(intlMessages.pollPaneTitle)}
-            icon="left_arrow"
-            aria-label={intl.formatMessage(intlMessages.hidePollDesc)}
-            className={styles.hideBtn}
-            onClick={() => {
-              Session.set('openPanel', 'userlist');
-            }}
-          />
-
-          <Button
             label={intl.formatMessage(intlMessages.closeLabel)}
             aria-label={`${intl.formatMessage(intlMessages.closeLabel)} ${intl.formatMessage(intlMessages.pollPaneTitle)}`}
             onClick={() => {
@@ -360,6 +348,19 @@ class Poll extends Component {
             icon="close"
             size="sm"
             hideLabel
+          />
+
+          <Button
+            ref={(node) => { this.hideBtn = node; }}
+            tabIndex={0}
+            label={intl.formatMessage(intlMessages.pollPaneTitle)}
+            icon="right_arrow"
+            iconRight
+            aria-label={intl.formatMessage(intlMessages.hidePollDesc)}
+            className={styles.hideBtn}
+            onClick={() => {
+              Session.set('openPanel', 'userlist');
+            }}
           />
 
         </header>

@@ -91,42 +91,44 @@ class NavBar extends PureComponent {
     return (
       <div className={styles.navbar}>
         <div className={styles.top}>
-          <div className={styles.left}>
+          {/* <div className={styles.left}>
             <SettingsDropdownContainer amIModerator={amIModerator} />
-          </div>
+          </div> */}
           <div className={styles.center}>
             <h1 className={styles.presentationTitle}>{presentationTitle}</h1>
 
-            <RecordingIndicator
+            {/* <RecordingIndicator
               mountModal={mountModal}
               amIModerator={amIModerator}
-            />
+            /> */}
           </div>
-          <div className={styles.right}>
-            {isExpanded ? null
-              : <Icon iconName="left_arrow" className={styles.arrowLeft} />
-            }
-            <Button
-              data-test="userListToggleButton"
-              onClick={NavBar.handleToggleUserList}
-              ghost
-              circle
-              hideLabel
-              label={intl.formatMessage(intlMessages.toggleUserListLabel)}
-              aria-label={ariaLabel}
-              icon="user"
-              className={cx(toggleBtnClasses)}
-              aria-expanded={isExpanded}
-              accessKey={TOGGLE_USERLIST_AK}
-            />
-            {!isExpanded ? null
-              : <Icon iconName="right_arrow" className={styles.arrowRight} />
-            }
+          <div className={styles.userhidden}>
+            <div className={styles.right}>
+              {isExpanded ? null
+                : <Icon iconName="left_arrow" className={styles.arrowLeft} />
+              }
+              <Button
+                data-test="userListToggleButton"
+                onClick={NavBar.handleToggleUserList}
+                ghost
+                circle
+                hideLabel
+                label={intl.formatMessage(intlMessages.toggleUserListLabel)}
+                aria-label={ariaLabel}
+                icon="user"
+                className={cx(toggleBtnClasses)}
+                aria-expanded={isExpanded}
+                accessKey={TOGGLE_USERLIST_AK}
+              />
+              {!isExpanded ? null
+                : <Icon iconName="right_arrow" className={styles.arrowRight} />
+              }
 
+            </div>
           </div>
-        </div>
-        <div className={styles.bottom}>
-          <TalkingIndicatorContainer amIModerator={amIModerator} />
+          <div className={styles.bottom}>
+            <TalkingIndicatorContainer amIModerator={amIModerator} />
+          </div>
         </div>
       </div>
     );

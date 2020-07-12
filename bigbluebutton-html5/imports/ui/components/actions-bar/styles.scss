@@ -102,8 +102,72 @@
 
 .btn {
   span {
-    box-shadow: none;
+    box-shadow: 0 2px 5px 0 rgb(0, 0, 0);
     background-color: transparent !important;
     border-color: var(--color-white) !important;
+  }
+}
+
+.listbtn{
+    span:first-child {
+      padding: 11px;
+      box-shadow: 0 2px 5px 0 rgb(0, 0, 0);
+      background-color: transparent !important;
+      border-color: var(--color-white) !important;
+      border: var(--border-size-large) solid var(--color-white) !important;
+    }
+}
+
+.userbtn {
+  margin: 0;
+
+  span {
+    box-shadow: 0 2px 5px 0 rgb(0, 0, 0);
+    background-color: transparent !important;
+    border-color: var(--color-white) !important;
+  }
+
+  &:hover,
+  &:focus {
+    span {
+      background-color: transparent !important;
+      // color: var(--color-white) !important;
+      // opacity: .75;
+    }
+  }
+}
+
+.hidden {
+  @include mq($small-only) {
+    display: none;
+  }
+}
+
+.top,
+.bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+.bottom {
+  @include mq($phone-landscape) {
+    margin-top: var(--mobile-margin-top);
+  }
+}
+
+
+.btnWithNotificationDot {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    bottom: var(--border-size);
+    right: 3px;
+    background-color: var(--color-danger);
+    border: var(--border-size) solid var(--color-gray-dark);
   }
 }

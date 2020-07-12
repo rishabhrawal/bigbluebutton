@@ -326,7 +326,7 @@ class App extends Component {
     return (
       <main className={styles.main}>
         {this.renderActivityCheck()}
-        {this.renderUserInformation()}
+
         <BannerBarContainer />
         <NotificationsBarContainer />
         <section className={styles.wrapper}>

@@ -99,6 +99,10 @@
   display: inline-block;
   transform: rotate(90deg);
 }
+.icon-bbb-more-plain:before {
+  content: "\e902";
+  display: inline-block;
+}
 .icon-bbb-promote:before {
   content: "\e903";
 }

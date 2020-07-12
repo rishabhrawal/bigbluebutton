@@ -106,6 +106,7 @@ class MessageListItem extends Component {
 
     if (!user) {
       return this.renderSystemMessage();
+      return null;
     }
 
     return (

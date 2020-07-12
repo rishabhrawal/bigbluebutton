@@ -183,7 +183,6 @@ class ActionsBar extends PureComponent {
               accessKey={TOGGLE_USERLIST_AK}
             />
           </div>
-          <SettingsDropdownContainer amIModerator={amIModerator} />
           {isLayoutSwapped
             ? (
               <PresentationOptionsContainer
@@ -193,6 +192,7 @@ class ActionsBar extends PureComponent {
             )
             : null
           }
+          <SettingsDropdownContainer amIModerator={amIModerator} />
         </div>
       </div>
     );

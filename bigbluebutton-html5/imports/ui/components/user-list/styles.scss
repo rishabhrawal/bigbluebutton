@@ -10,7 +10,9 @@
 :root {
   --unread-messages-bg: var(--color-danger);
   --user-list-text: var(--color-gray);
-  --user-list-bg: var(--color-off-white);
+  // --user-list-text: var(--color-blue-light);
+  // --user-list-bg: var(--color-off-white);
+  --user-list-bg: var(--color-blue-lighter);
 
   --user-thumbnail-border: var(--color-gray-light);
   --user-thumbnail-text: var(--user-thumbnail-border);
@@ -86,6 +88,8 @@
   background-color: var(--user-list-bg);
   color: var(--user-list-text);
   height: 100%;
+  border: var(--user-thumbnail-border) !important;
+  border-color: var(--color-white) !important;
 }
 
 .lists {

@@ -105,7 +105,7 @@ class MessageListItem extends Component {
     const regEx = /<a[^>]+>/i;
 
     if (!user) {
-      return this.renderSystemMessage();
+      //return this.renderSystemMessage();
       return null;
     }
 

@@ -250,35 +250,35 @@ class UserOptions extends PureComponent {
           onClick={() => mountModal(<LockViewersContainer />)}
         />) : null
       ),
-      (isMeteorConnected ? <DropdownListSeparator key={_.uniqueId('list-separator-')} /> : null),
-      (canCreateBreakout && isMeteorConnected ? (
-        <DropdownListItem
-          key={this.createBreakoutId}
-          icon="rooms"
-          label={intl.formatMessage(intlMessages.createBreakoutRoom)}
-          description={intl.formatMessage(intlMessages.createBreakoutRoomDesc)}
-          onClick={this.onCreateBreakouts}
-        />) : null
-      ),
-      (canInviteUsers && isMeteorConnected ? (
-        <DropdownListItem
-          icon="rooms"
-          label={intl.formatMessage(intlMessages.invitationItem)}
-          key={this.createBreakoutId}
-          onClick={this.onInvitationUsers}
-        />) : null
-      ),
-      (amIModerator && CaptionsService.isCaptionsEnabled() && isMeteorConnected
-        ? (
-          <DropdownListItem
-            icon="closed_caption"
-            label={intl.formatMessage(intlMessages.captionsLabel)}
-            description={intl.formatMessage(intlMessages.captionsDesc)}
-            key={this.captionsId}
-            onClick={this.handleCaptionsClick}
-          />
-        )
-        : null),
+      // (isMeteorConnected ? <DropdownListSeparator key={_.uniqueId('list-separator-')} /> : null),
+      // (canCreateBreakout && isMeteorConnected ? (
+      //   <DropdownListItem
+      //     key={this.createBreakoutId}
+      //     icon="rooms"
+      //     label={intl.formatMessage(intlMessages.createBreakoutRoom)}
+      //     description={intl.formatMessage(intlMessages.createBreakoutRoomDesc)}
+      //     onClick={this.onCreateBreakouts}
+      //   />) : null
+      // ),
+      // (canInviteUsers && isMeteorConnected ? (
+      //   <DropdownListItem
+      //     icon="rooms"
+      //     label={intl.formatMessage(intlMessages.invitationItem)}
+      //     key={this.createBreakoutId}
+      //     onClick={this.onInvitationUsers}
+      //   />) : null
+      // ),
+      // (amIModerator && CaptionsService.isCaptionsEnabled() && isMeteorConnected
+      //   ? (
+      //     <DropdownListItem
+      //       icon="closed_caption"
+      //       label={intl.formatMessage(intlMessages.captionsLabel)}
+      //       description={intl.formatMessage(intlMessages.captionsDesc)}
+      //       key={this.captionsId}
+      //       onClick={this.handleCaptionsClick}
+      //     />
+      //   )
+      //   : null),
     ]);
 
     return this.menuItems;

@@ -92,6 +92,10 @@
 
 .recordingStatusViewOnly {
   display: flex;
+  border: var(--border-size-large) solid var(--color-white);
+  box-shadow: 0 2px 5px 0 rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 3em 3em;
 }
 
 .recordingIndicatorIcon {

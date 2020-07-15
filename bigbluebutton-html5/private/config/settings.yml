@@ -7,12 +7,12 @@ public:
     listenOnlyMode: true
     forceListenOnly: false
     skipCheck: false
-    clientTitle: BigBlueButton
-    appName: BigBlueButton HTML5 Client
+    clientTitle: Techflic
+    appName: Techflic Client
     bbbServerVersion: 2.2
-    copyright: "©2020 BigBlueButton Inc."
+    copyright: "©2020 Techflic Inc."
     html5ClientBuild: HTML5_CLIENT_VERSION
-    helpLink: https://bigbluebutton.org/html5/
+    helpLink: https://techflic.org/
     lockOnJoin: true
     cdn: ""
     basename: "/html5client"
@@ -150,7 +150,7 @@ public:
     time: 5000
   chat:
     enabled: true
-    startClosed: false
+    startClosed: true
     min_message_length: 1
     max_message_length: 5000
     grouping_messages_window: 10000
@@ -169,8 +169,8 @@ public:
     typingIndicator:
       enabled: true
   note:
-    enabled: false
-    url: ETHERPAD_HOST
+    enabled: true
+    url: https://live.techflic.com/pad
     config:
       showLineNumbers: false
       showChat: false
@@ -329,7 +329,7 @@ private:
     pencilChunkLength: 100
     loadSlidesFromHttpAlways: false
   etherpad:
-    apikey: ETHERPAD_APIKEY
+    apikey: G85efYGDywJIugOIgk4lKj1UYWpGJfr8zq6eY4WaNq2CyDluxTyhY5Trig0ISA
     version: 1.2.13
     host: 127.0.0.1
     port: 9001

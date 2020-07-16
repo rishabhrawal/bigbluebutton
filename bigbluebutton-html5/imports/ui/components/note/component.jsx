@@ -56,7 +56,8 @@ const Note = (props) => {
             }}
             aria-label={intl.formatMessage(intlMessages.hideNoteLabel)}
             label={intl.formatMessage(intlMessages.title)}
-            icon={isRTL ? "right_arrow" : "left_arrow"}
+            icon={isRTL ? "left_arrow" : "right_arrow"}
+            iconRight
             className={styles.hideBtn}
           />
         </div>

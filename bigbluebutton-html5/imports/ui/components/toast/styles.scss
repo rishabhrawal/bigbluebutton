@@ -128,8 +128,9 @@
   min-width: var(--toast-container-min-width);
   max-width: var(--toast-container-max-width);
   box-sizing: border-box;
-  right: var(--jumbo-padding-y);
-  left: auto;
+  // right: var(--jumbo-padding-y);
+  // left: auto;
+  left: var(--jumbo-padding-y);
   top: var(--toast-offset);
   max-height: 75vh;
   overflow: hidden;

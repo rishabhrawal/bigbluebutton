@@ -176,10 +176,8 @@ class ActionsBar extends PureComponent {
               size="lg"
               hideLabel
               label={intl.formatMessage(intlMessages.toggleUserListLabel)}
-              aria-label={ariaLabel}
               icon="user"
               className={cx(styles.button, isExpanded || styles.btn)}
-              aria-expanded={isExpanded}
               accessKey={TOGGLE_USERLIST_AK}
             />
           </div>

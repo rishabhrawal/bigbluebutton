@@ -162,10 +162,10 @@ class ActionsBar extends PureComponent {
             screenshareDataSavingSetting,
           }}
           />
-          <RecordingIndicator
+          {/* <RecordingIndicator
             mountModal={mountModal}
             amIModerator={amIModerator}
-          />
+          /> */}
           <div className={styles.hidden}>
             <Button
               data-test="userListToggleButton"

@@ -181,7 +181,7 @@ public:
     autoSwapLayout: true
     hidePresentation: false
   media:
-    stunTurnServersFetchAddress: "/bigbluebutton/api/stuns"
+    stunTurnServersFetchAddress: "/turboflic/api/stuns"
     cacheStunTurnServers: true
     fallbackStunServer:  ''
     mediaTag: "#remote-media"
@@ -194,7 +194,7 @@ public:
     defaultPresentationFile: default.pdf
     panZoomThrottle: 32
     restoreOnUpdate: false
-    uploadEndpoint: "/bigbluebutton/presentation/upload"
+    uploadEndpoint: "/turboflic/presentation/upload"
     uploadSizeMin: 0
     uploadSizeMax: 50000000
     uploadValidMimeTypes:

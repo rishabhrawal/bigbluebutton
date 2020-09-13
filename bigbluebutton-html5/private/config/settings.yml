@@ -85,7 +85,7 @@ public:
     enableNetworkMonitoring: false
     packetLostThreshold: 10
   kurento:
-    wsUrl: wss://live.techflic.com/bbb-webrtc-sfu
+    wsUrl: wss://conf1.techflic.com/bbb-webrtc-sfu
     chromeDefaultExtensionKey: akgoaoikmbmhcopjgakkcepdgdgkjfbc
     chromeDefaultExtensionLink: https://chrome.google.com/webstore/detail/bigbluebutton-screenshare/akgoaoikmbmhcopjgakkcepdgdgkjfbc
     chromeExtensionKey: KEY
@@ -170,7 +170,7 @@ public:
       enabled: true
   note:
     enabled: true
-    url: https://live.techflic.com/pad
+    url: https://conf1.techflic.com/pad
     config:
       showLineNumbers: false
       showChat: false
